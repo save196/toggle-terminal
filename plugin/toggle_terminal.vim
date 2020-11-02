@@ -1,11 +1,10 @@
 " =============================================================================
 " File: toggle_terminal.vim
-" Author: pakutoma
+" Author: pakutoma - edited by sav196
 " License: MIT License
-" Last Change: 2018/05/24
 " =============================================================================
 
-if exists('g:loaded_toggle_terminal') || v:version < 800 || v:version == 800 && !has('patch-8.0.1593')
+if exists('g:loaded_toggle_terminal')
   finish
 endif
 let g:loaded_toggle_terminal = 1
