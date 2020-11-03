@@ -10,12 +10,11 @@ set cpo&vim
 let g:toggle_terminal#position = get(g:,'toggle_terminal#position','botright')
 
 function! toggle_terminal#ToggleTerminal()
-    let bufferNum = bufnr('ToggleTerminal')
+    let bufferNum = bufnr('term://')
     if bufferNum == -1 || bufloaded(bufferNum) != 1
         execute g:toggle_terminal#position.' split'
         execute 'term'
         execute 'resize 10'
-        file ToggleTerminal
     else
         let windowNum = bufwinnr(bufferNum)
         if windowNum == -1
